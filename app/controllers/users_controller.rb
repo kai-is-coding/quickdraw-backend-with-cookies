@@ -29,16 +29,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def test
-    puts "IN users_controller"
-    p @current_user
-    render json: {
-      user: @current_user
-    }
-  end
 
   private
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation, :playroom_id)
   end
 end

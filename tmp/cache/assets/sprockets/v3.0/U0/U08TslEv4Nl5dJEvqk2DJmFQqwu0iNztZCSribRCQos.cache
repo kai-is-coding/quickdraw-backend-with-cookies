@@ -1,0 +1,9 @@
+I"Ê(function() {
+  App.playrooms = App.cable.subscriptions.create("PlayroomsChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {}
+  });
+
+}).call(this);
+:ET
