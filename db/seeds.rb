@@ -15,4 +15,6 @@ puts 'creating users...'
 u1 = User.create! username: 'test1', email: 'test1@ga.co', password: 'chicken', draw: true,
 playroom_id: p1.id
 u2 = User.create! username: 'test2', email: 'test2@ga.co', password: 'chicken', draw: false, playroom_id: p1.id
+u3 = User.create! username: 'test3', email: 'test3@ga.co', password: 'chicken', draw: true, playroom_id: p2.id
+u4 = User.create! username: 'test4', email: 'test4@ga.co', password: 'chicken', draw: false, playroom_id: p2.id
 puts "created #{User.count} users"
