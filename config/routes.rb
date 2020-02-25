@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   post '/login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  delete '/logout' => 'sessions#destroy'
   get '/logged_in' => 'sessions#is_logged_in?'
   resources :users, only: [:create, :show, :index]
   # test cookies function only
