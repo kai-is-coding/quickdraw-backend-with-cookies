@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'messages/new'
-  get 'messages/create'
-  get 'messages/index'
-  get 'messages/show'
-  get 'messages/destroy'
   post '/login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   get '/logged_in' => 'sessions#is_logged_in?'
