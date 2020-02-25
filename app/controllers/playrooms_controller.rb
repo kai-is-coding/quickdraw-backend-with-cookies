@@ -14,12 +14,17 @@ class PlayroomsController < ApplicationController
 
   def index
     @playrooms = Playroom.all
-    render json: @playrooms, include: [:users]
+    # render json: @playrooms, include: [:users]
+    render :json => @playrooms.to_json( :include => [:users, :draw])
+
+
+    #
+    # render :json => @programs, :include => {:insurer => {:only => :name}}, :except => [:created_at, :updated_at]
   end
 
   def show
     @playroom = Playroom.find params[:id]
-    render json:@playroom
+    render :json => @playroom.to_json( :include => [:users, :draw])
   end
 
   def destroy

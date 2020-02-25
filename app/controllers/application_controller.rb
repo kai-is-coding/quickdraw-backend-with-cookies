@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   def login!
     session[:user_id] = @user.id
+    cookies.encrypted[:user_id] = @user.id
   end
 
   def logged_in?
@@ -14,7 +15,8 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= User.find_by(id: session[:user_id]) # if session[:user_id]
+    session.clear unless @current_user
     puts "GOT USER from ID #{session[:user_id]}:"
     p @current_user
   end
@@ -25,5 +27,6 @@ class ApplicationController < ActionController::Base
 
   def logout!
     session.clear
+    cookies.encrypted[:user_id] = nil
   end
 end
