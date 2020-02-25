@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: redis://redistogo:fb0554c0844b319aebb8ee213a151174@barb.redistogo.com:10217/
   channel_prefix: quickdraw-backend-with-cookies_production

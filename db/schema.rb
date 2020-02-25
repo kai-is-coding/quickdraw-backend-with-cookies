@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_25_042002) do
+ActiveRecord::Schema.define(version: 2020_02_24_102333) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,12 +21,6 @@ ActiveRecord::Schema.define(version: 2020_02_25_042002) do
     t.datetime "updated_at", null: false
     t.integer "playroom_id"
     t.string "name"
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.string "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "playrooms", force: :cascade do |t|
