@@ -26,6 +26,24 @@ class DrawsChannel < ApplicationCable::Channel
 
   end
 
+  def send_time(data)
+    puts "GOT send_time() =================="
+
+    p data
+    # ActionCable.server.broadcast 'draw', data
+    ActionCable.server.broadcast "room_#{params[:playroom]}", data
+
+  end
+
+  def send_word(data)
+    puts "GOT send_word() =================="
+
+    p data
+    # ActionCable.server.broadcast 'draw', data
+    ActionCable.server.broadcast "room_#{params[:playroom]}", data
+
+  end
+
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
   end
