@@ -24,6 +24,6 @@ class PlayroomsController < ApplicationController
 
   private
   def playroom_params
-    params.require(:playroom).permit(:title, :users)
+    params.require(:playroom).permit(:title, :users, :drawer, :guesser)
   end
 end

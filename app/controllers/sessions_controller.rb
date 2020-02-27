@@ -30,6 +30,6 @@ class SessionsController < ApplicationController
   private
 
   def session_params
-    params.require(:user).permit(:username, :email, :password, :playroom_id)
+    params.require(:user).permit(:username, :email, :password, :playroom_id, :draw)
   end
 end
