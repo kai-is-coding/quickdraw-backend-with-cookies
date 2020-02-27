@@ -25,7 +25,7 @@ module QuickdrawBackendWithCookies
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'https://kai-is-coding.github.io/quickdraw-frontend/'
         resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end
