@@ -31,6 +31,8 @@ Rails.application.configure do
   config.assets.compile = true
 
   config.web_socket_server_url = "wss://quickdraw-backend.herokuapp.com/cable"
+  config.action_cable.url = "wss://quickdraw-backend.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = [ 'https://kai-is-coding.github.io', 'http://kai-is-coding.github.io']
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -44,7 +46,6 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
-  config.action_cable.allowed_request_origins = [ 'https://quickdraw-backend.herokuapp.com', 'http://quickdraw-backend.herokuapp.com']
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
