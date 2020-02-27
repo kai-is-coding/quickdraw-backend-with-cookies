@@ -27,10 +27,10 @@ module QuickdrawBackendWithCookies
       allow do
         origins '*'
         resource (
-          '*'
-          headers :any
-          methods [:get, :post, :delete, :options]
-          credentials true
+          '*',
+          headers :any,
+          methods [:get, :post, :delete, :options],
+          credentials true,
           )
       end
     end
