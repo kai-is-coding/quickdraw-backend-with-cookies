@@ -1,0 +1,9 @@
+I"Â(function() {
+  App.draws = App.cable.subscriptions.create("DrawsChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {}
+  });
+
+}).call(this);
+:ET
