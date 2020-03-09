@@ -41,9 +41,5 @@ end
 ```
 , this channel is stream_from `room_#{params[:playroom]}`, which is defined in frontend when the ActionCable is generated. There are also few different methods in this channel to handel different data transforming in ActionCable.
 
-## Existing bugs
-The existing bugs are timer. When user run out time, the timer should start again. But it is not working correctly and needs to be fixed. Also, some layout issues need to be fixed as well.
-## Roadmap
-The next step for this project is adding some other features, such as loading page, automatically starting game when playroom is full.
 ## Authors and acknowledgement
 I would like to thank my instructors, Luke Hammer, Josh Parry and Ana Silva who is helping me get through the entire project. Also, I would like the authors of this article https://medium.com/how-i-get-it/react-with-rails-user-authentication-8977e98762f2. 
