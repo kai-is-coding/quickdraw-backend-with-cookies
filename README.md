@@ -1,7 +1,7 @@
 # quickdraw-backend-with-cookies
 
 ## Introduction
-It is a multiplayer drawing game. When users sign in, they can join playroom and select to be a drawer or a guesser. Drawer is provided a random word and draws on a canvas, and guesser should guess that word in 30 seconds.This application is using React as frontend. You can check Demo: https://kai-is-coding.github.io/quickdraw-frontend/#/
+It is a multiplayer drawing game. When users sign in, they can join playroom and select to be a drawer or a guesser. Drawer is provided a random word and draws on a canvas, and guesser should guess that word in 30 seconds.This application is using React as frontend. You can check Demo: https://kai-is-coding.github.io/quickdraw-frontend/#/, and frontend github link: https://github.com/kai-is-coding/quickdraw-frontend
 
 ## Backend Code Explaination
 This application has two main models `playrooms users`, `playroom has_many users` and `user belongs to playroom`. Another model `draws` is created for future plans to track drawing histroy. 
