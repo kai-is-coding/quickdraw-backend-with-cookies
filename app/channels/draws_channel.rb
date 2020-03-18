@@ -10,23 +10,23 @@ class DrawsChannel < ApplicationCable::Channel
 
   # event from the frontend client
   def send_line(data)
-    puts "GOT send_line() ----------------------------------"
-    p data
+    # puts "GOT send_line() ----------------------------------"
+    # p data
     ActionCable.server.broadcast "room_#{params[:playroom]}", data
   end
 
   def send_message(data)
-    puts "GOT send_message() =================="
-
-    p data
+    # puts "GOT send_message() =================="
+    #
+    # p data
     ActionCable.server.broadcast "room_#{params[:playroom]}", data
 
   end
 
   def send_time(data)
-    puts "GOT send_time() =================="
-
-    p data
+    # puts "GOT send_time() =================="
+    #
+    # p data
     ActionCable.server.broadcast "room_#{params[:playroom]}", data
 
   end
@@ -40,14 +40,14 @@ class DrawsChannel < ApplicationCable::Channel
   end
 
   def send_game_status(data)
-    puts "GOT send_game_status()+++++++++++++++"
-    p data
+    # puts "GOT send_game_status()+++++++++++++++"
+    # p data
     ActionCable.server.broadcast "room_#{params[:playroom]}", data
   end
-  
+
   def send_find(data)
-    puts "GOT send_find()+++++++++++++++"
-    p data
+    # puts "GOT send_find()+++++++++++++++"
+    # p data
     ActionCable.server.broadcast "room_#{params[:playroom]}", data
   end
 
