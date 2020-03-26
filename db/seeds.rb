@@ -1,7 +1,8 @@
 Playroom.destroy_all
 puts 'creating playrooms...'
 p1 = Playroom.create! title: 'playroom1', drawer: 1, guesser: 1
-p2 = Playroom.create! title: 'playroom2', drawer: 1, guesser: 2
+p2 = Playroom.create! title: 'playroom2', drawer: 1, guesser: 1
+p3 = Playroom.create! title: 'playroom3', drawer: 1, guesser: 1
 puts "created #{Playroom.count} playrooms"
 
 Draw.destroy_all
